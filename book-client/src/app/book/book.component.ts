@@ -12,7 +12,7 @@ books:any;
 
   ngOnInit() {
     let respone = this.http.get("http://localhost:8080/findAllBooks");
-    respone.subscribe((data)=>console.log(data));
+    respone.subscribe((data)=>(this.books=data));
   }
 
 }
